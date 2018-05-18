@@ -8,7 +8,7 @@ var component = React.createElement(
 var componentTest = React.createElement(
   'h6',
   null,
-  'hello how are you?'
+  'babel test afasdfa adsfasfafadsf'
 ); //
 
 ReactDOM.render(component, contentNode); // Render the component inside the content Node
