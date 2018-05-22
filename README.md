@@ -1,5 +1,6 @@
 # react-basics
 ## just some basic react 
 
-- [ ] install required softwares
-- [ ] have fun
+### TODO
+- [X] install required softwares
+- [X] have fun
