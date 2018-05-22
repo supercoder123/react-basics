@@ -5,7 +5,7 @@ var bb = document.getElementById('bb');
 var newbb = React.createElement(
   'h1',
   null,
-  'hello how are you? It\'s working finally'
+  'hello how are you? '
 );
 var continents = ['Africa', 'America', 'Asia', 'Australia', 'Europe'];
 var message = continents.map(function (c) {

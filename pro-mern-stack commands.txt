@@ -1,0 +1,7 @@
+>> To start server 
+npm start
+
+>>To compile jsx to js
+node_modules/.bin/babel src --presets react --out-dir static
+node_modules/.bin/babel src --presets react,env --out-dir static
+node_modules/.bin/babel src --presets react --out-dir static --watch
