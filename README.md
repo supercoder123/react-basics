@@ -1,4 +1,4 @@
-# react-basics
+# react-basics and mern stack  
 ## just some basic react 
 
 ### TODO
