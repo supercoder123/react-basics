@@ -1,26 +1,43 @@
 const contentNode = document.getElementById('contents');
-const bb = document.getElementById('bb');
-const newbb = <h1>hello how are you? </h1>
-const continents = ['Africa','America','Asia','Australia','Europe'];
-const message = continents.map(c => `Hello ${c}!`).join(' ');
-const component = <p>{message}</p>; // A simple JSX component
-//ReactDOM.render(component, contentNode); // Render the component inside the  content Node
-//ReactDOM.render(newbb, bb); // Render the component inside the  content Node
-
 
 class IssueFilter extends React.Component {
   render() {
-      return (
-        <div>This is a placeholder for the Issue Filter.</div>
-      )
-    }
+    return (
+      <div>This is a placeholder for the Issue Filter.</div>
+    )
+  }
 }
+
+class IssueRow extends React.Component {
+  render() {
+    const borderedStyle = {border: "1px solid silver", padding: 4};
+    return (
+      <tr>
+        <td style={borderedStyle}>{this.props.issue_id}</td>
+        <td style={borderedStyle}>{this.props.issue_title}</td>
+      </tr>
+    )
+  }
+}
+
 class IssueTable extends React.Component {
   render() {
-      return (
-        <div>This is a placeholder for a table of Issues.</div>
-      )
-    }
+    const borderedStyle = {border: "1px solid silver", padding: 6};
+    return (
+      <table style={{borderCollapse: "collapse"}}>
+        <thead>
+          <tr>
+            <th style={borderedStyle}>Id</th>
+            <th style={borderedStyle}>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <IssueRow issue_id={1} issue_title="Error in console when clicking Add" />
+          <IssueRow issue_id={2} issue_title="Missing bottom border on panel" />
+        </tbody>
+      </table>
+    )
+  }
 }
 
 class IssueAdd extends React.Component {
@@ -31,18 +48,19 @@ class IssueAdd extends React.Component {
   }
 }
 
-class IssueList extends React.Component{
-  render(){
-    return(
+class IssueList extends React.Component {
+  render() {
+    return (
       <div>
-      <h1>Issue Tracker</h1>
-      <IssueFilter />
-      <hr />
-      <IssueTable />
-      <hr />
-      <IssueAdd />
+        <h1>Issue Tracker</h1>
+        <IssueFilter />
+        <hr />
+        <IssueTable />
+        <hr />
+        <IssueAdd />
       </div>
     );
   }
 }
-ReactDOM.render(<IssueList/>,contentNode);
+
+ReactDOM.render(<IssueList />, contentNode);    // Render the component inside the content Node
